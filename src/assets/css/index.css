@@ -1,0 +1,166 @@
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* 用户界面的左右分栏 */
+.context{
+  width: 100%;
+  height: 800px;
+  display: flex;
+}
+.context .left{
+  width: 200px;
+  height: 800px;
+  background-color: #d1cbca;
+}
+.context .right{
+  flex: 1;
+}
+
+#components-layout-demo-fixed .logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 24px 16px 0;
+  float: left;
+}
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+.IP{
+  height: 64px;
+}
+.chujue-icon{
+  float: left;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 2%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.chujue-ip{
+  /* height: 50%; */
+  padding: 0;
+  text-align: right;
+  float: right;
+}
+
+.chujue-ip input{
+  height: 50%;
+  margin-top: 10px;
+}
+.chujue-ip button{
+  margin-top: 10px;
+  height: 50%;
+}
+
+.shijue-ip{
+  /* height: 50%; */
+}
+
+.shijue-ip input{
+  height: 50%;
+}
+.shijue-ip button{
+  height: 50%;
+}
+
+/* 触觉界面 */
+.chujue-context{
+  height: 500px;
+  width: 100%;
+  background-color: antiquewhite;
+  text-align: center;
+}
+
+.chujue-dan{
+  height: 500px;
+  width: 49%;
+  background-color: aqua;
+  float: left;
+  font-size: 20px;
+}
+.chujue-dan-title{
+  font-weight: bold;
+  padding: 10px;
+}
+
+.chujue-dan-context{
+  margin: 15px;
+  height: 85%;
+  width: 95%;
+  background-color: darkgoldenrod;
+}
+
+.chujue-24{
+  height: 500px;
+  width: 49%;
+  background-color: rgb(204, 85, 168);
+  float: right;
+}
+.chujue-24-title{
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+.chujue-24-context{
+  margin: 15px;
+  height: 85%;
+  width: 95%;
+  background-color: rgb(11, 37, 184);
+}
+
+/* 视觉界面 */
+.shijue-context{
+  height: 500px;
+  width: 100%;
+  background-color: antiquewhite;
+  text-align: center;
+}
+
+.shijue-video{
+  height: 500px;
+  width: 49%;
+  background-color: rgb(167, 168, 238);
+  float: left;
+  font-size: 20px;
+}
+
+.shijue-video-context{
+  margin: 15px;
+  height: 85%;
+  width: 95%;
+  background-color: rgb(159, 233, 75);
+}
+
+.shijue-model{
+  height: 500px;
+  width: 49%;
+  background-color: rgb(167, 168, 238);
+  float: left;
+  font-size: 20px;
+}
+
+.shijue-model-context{
+  margin: 15px;
+  height: 85%;
+  width: 95%;
+  background-color: rgb(238, 106, 209);
+}
+
+.shijue-result{
+  font-size: 15px;
+  font-weight: bold;
+}

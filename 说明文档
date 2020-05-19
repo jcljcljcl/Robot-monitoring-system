@@ -1,0 +1,18 @@
+1.从数据库拿出数据：
+    安装express-generator： npm install express-generator --save
+    创建express目录：express --view=ejs server
+    创建之后，出现server目录，安装依赖： cd server    npm install   启动项目：SET DEBUG=server:* 或 npm start
+    默认网址：localhost:3000
+    新建db/sql.js连接数据库，在index.js中读取数据表
+    安装axios: npm install axios --save
+    在项目src文件夹下新建一个network/request.js，利用api实现代理跨域
+        安装：npm install http-proxy-middleware --save
+        新建文件：src/setupProxy.js 这个在项目启动后会自动执行，在其中写代理
+    在network下面建立chujue_data和shijue_data读取数据库数据
+2.使用状态管理器
+    npm install --save redux
+    npm install --save react-redux
+    参考文档:https://react-redux.js.org/introduction/quick-start
+    将redux和react通过Provider连接在一起，就可以在App.js及不同组建中访问redux了 
+    将触觉及视觉界面，首页的数据库数据都通过redux拿到。
+    
