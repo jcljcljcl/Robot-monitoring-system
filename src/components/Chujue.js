@@ -7,6 +7,8 @@ import {connect} from 'react-redux'
 import {loadChujueAction}  from '../store/actions/loadChujue'
 //导入echarts
 import echarts from 'echarts'
+//导入封装好的防抖函数
+import debounce from '../util.js'
 
 const { Option } = Select;
 
@@ -30,6 +32,7 @@ class Chujue extends React.Component {
                 type: 'line',
                 smooth: true
             }]
+
         },
 
         //24通道内容
@@ -46,9 +49,14 @@ class Chujue extends React.Component {
               type: 'line',
               smooth: true
           }]
-      }
-         };
-
+      },
+        //ip及port
+        ip:"",
+        port:"",
+        address:""
+      };
+      this.isIpLegal = debounce(this.isIpLegal, 1000)//调用设定好的防抖方法
+      this.isPortLegal = debounce(this.isPortLegal, 1000)//调用设定好的防抖方法
     }
 
     componentDidMount(){
@@ -97,7 +105,37 @@ class Chujue extends React.Component {
         myChart.setOption(this.state.option_dan)
       }
     
+    //用户输入IP和端口号后，点击链接后调用该函数
+    connect=(ip)=>{
+      this.setState({
+          address:"http://"+this.state.ip+":"+this.state.port
+      })
+    }
 
+    //获取用户输入的IP地址
+    ipGet=(event)=>{
+      this.isIpLegal(event.target.value) // 对用户输入进行判断
+      this.setState({
+          ip : event.target.value
+      },()=>{
+          // this.isPhoneLegal(event.target.value)
+      })
+    }
+    isIpLegal  = (ip) => {
+      console.log(ip)  // 防抖后获取的值
+    } 
+    //获取用户输入的port地址
+    portGet=(event)=>{
+      this.isPortLegal(event.target.value) // 对用户输入进行判断
+      this.setState({
+          port : event.target.value
+      },()=>{
+          // this.isPhoneLegal(event.target.value)
+      })
+    }
+    isPortLegal= (port) => {
+      console.log(port)  // 防抖后获取的值
+    } 
     render() {
     
         return (
@@ -105,10 +143,10 @@ class Chujue extends React.Component {
 
                 <div className="IP">
                   <div className="chujue-icon"> 
-                    <RedditOutlined />&nbsp;触觉信息显示
+                    <RedditOutlined />&nbsp;触觉信息显示 
                   </div>
                     <div className="chujue-ip"> 
-                      触觉IP地址：<input type='text'/>端口号：<input type='text'/><button>连接</button>
+                      触觉IP地址：<input type='text' onChange={this.ipGet}/>端口号：<input type='text' onChange={this.portGet}/><button onClick={this.connect}>连接</button>
                     </div>
                 </div>
 

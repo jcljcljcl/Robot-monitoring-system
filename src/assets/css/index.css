@@ -88,7 +88,7 @@ code {
 .chujue-dan{
   height: 500px;
   width: 49%;
-  background-color: aqua;
+  background-color: rgb(240, 188, 224);
   float: left;
   font-size: 20px;
 }
@@ -101,13 +101,13 @@ code {
   margin: 15px;
   height: 85%;
   width: 95%;
-  background-color: darkgoldenrod;
+  /* background-color: darkgoldenrod; */
 }
 
 .chujue-24{
   height: 500px;
   width: 49%;
-  background-color: rgb(204, 85, 168);
+  background-color: rgb(240, 188, 224);
   float: right;
 }
 .chujue-24-title{
@@ -119,7 +119,7 @@ code {
   margin: 15px;
   height: 85%;
   width: 95%;
-  background-color: rgb(11, 37, 184);
+  /* background-color: rgb(11, 37, 184); */
 }
 
 /* 视觉界面 */
@@ -148,7 +148,7 @@ code {
 .shijue-model{
   height: 500px;
   width: 49%;
-  background-color: rgb(167, 168, 238);
+  background-color: rgb(193, 194, 243);
   float: left;
   font-size: 20px;
 }
@@ -157,7 +157,7 @@ code {
   margin: 15px;
   height: 85%;
   width: 95%;
-  background-color: rgb(238, 106, 209);
+  /* background-color: rgb(238, 106, 209); */
 }
 
 .shijue-result{
